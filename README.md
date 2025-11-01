@@ -6,7 +6,8 @@ This project implements a 16-bit carry save adder (CSA) designed and verified th
 ## Project Structure
 
 - **Verilog/**
-  - `carry_save_adder.v` : RTL code for the 16-bit carry save adder.
+  - `carry_save_adder.v` : RTL code for the 16-bit carry save adder.[View carry_save_adder.v source code](carry_save_adder.v)
+
   - `full_adder.v` : Full adder module used in the CSA.
 - **Testbench/**
   - `carry_save_adder_tb.v` : Verilog testbench for functional simulation.
