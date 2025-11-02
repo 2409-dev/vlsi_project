@@ -1,0 +1,2 @@
+the area report provides the total cell area utilized by the synthesized CSA, along with a breakdown by module instances and categories such as logic, registers, and latches.
+For this implementation, the total cell area is reported as 314.870 (unit based on the library), allowing designers to estimate silicon usage and cost.
