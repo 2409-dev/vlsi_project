@@ -66,7 +66,7 @@ The project follows these main steps:
 - again in terminal generate the reports of area, power,timing 
 
 - - Inspect reports of [report_area](reports/report_area.txt),[report_power](reports/report_power.txt),[report_timing](reports/report_timing.txt)
-  - the final report   [report](images/report.jpg)
+  - the final report   [report](images/reports.jpg)
 
 ### 3. Physical Design and Layout in Cadence Innovus
 
