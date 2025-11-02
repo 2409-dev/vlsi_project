@@ -1,0 +1,3 @@
+The power report, generated using the Joules engine, details the breakdown of total power consumption
+(in microwatts or milliwatts depending on the library settings) into internal, switching, and leakage components for each functional block.
+This helps assess the adder’s energy efficiency and suitability for low-power applications.
