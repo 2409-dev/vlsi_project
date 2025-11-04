@@ -81,15 +81,19 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Import synthesized **Verilog netlist**, **SDC constraints**, and **library files (.lib, .lef)**.  
 - Load **technology LEF** to define process layers and DRC rules.  
 - Set up the design environment and initialize the design.[View netlist source code](reports/carry_save_adder_netlist.v)
+  [View output constraints code](reports/carry_save_adder_syn.sdc)
 ### 2. Floorplanning
 - Define core area, aspect ratio, and die size.
 - Place I/O pins, macros, and power rings (VDD/VSS).
 - Plan power grids and placement blockages if needed.
-- Maintain a core utilization between 60%–80% for optimal results.
+    [floor planning] [report](images/floorplanning.jpg)
+
 ### 3. Power Planning
 - Generate power and ground rings around the core.
 - Add power stripes for uniform power distribution.
  - Perform IR-drop checks and verify connectivity.
+    [power planning] [report](images/powerplanning.jpg)
+
 ### 4. Placement
 - Place all standard cells automatically using the Innovus placer.
 - Run placement optimization to reduce wire length and congestion.
