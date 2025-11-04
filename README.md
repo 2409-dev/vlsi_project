@@ -84,7 +84,7 @@ The project follows these main steps:
 
 ## Author
 
-[GURRAM GOWTHAM]
+[GURRAM GOWTHAM,Murahari Venkat]
 
 ## License
 
