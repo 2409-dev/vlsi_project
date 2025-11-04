@@ -69,11 +69,11 @@ The project follows these main steps:
 - again in terminal generate the reports of area, power,timing 
 
 - - Inspect reports of [report_area](reports/report_area.txt),[report_power](reports/report_power.txt),[report_timing](reports/report_timing.txt)
-  - the final report   [report](images/reports.jpg)
+  - the final report 
+<img width="1482" height="733" alt="image" src="https://github.com/user-attachments/assets/e959161a-e909-451a-9217-53d98b084730" />
 
-### 3. Physical Design and Layout in Cadence Innovus
 
-## 🧱 Physical Design and Layout in *Cadence Innovus*
+## Physical Design and Layout in *Cadence Innovus*
 
 The physical design phase converts the synthesized **netlist** into an optimized **layout** that meets timing, power, and area constraints.  
 Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)** using *Cadence Innovus*.
