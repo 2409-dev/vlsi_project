@@ -121,10 +121,10 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Inspect the final layout visually using the Layout Viewer
  - Capture and include screenshots of:
 - Floorplan view
-- Placed cells
+- Placed cells[cellview](images/cellview.jpg)
 - Routed layout
 - Final GDSII view [View output constraints code](reports/carry_save_adder.gds)
-
+- final 3D view[3Dview](images/3dview.jpg)
 ## Constraints
 
 - The `input_constraints.sdc` file configures a 100 MHz clock period, input and output delays, and accounts for clock uncertainty.
