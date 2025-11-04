@@ -70,11 +70,55 @@ The project follows these main steps:
 
 ### 3. Physical Design and Layout in Cadence Innovus
 
-- Import the synthesized netlist and constraint files into Cadence Innovus for physical design implementation.
-- Perform floorplanning, placement, clock tree synthesis (CTS), routing, and optimization.
-- Generate the final GDSII layout ready for tape-out.
-- Review layout and DRC/LVS reports within Innovus.
-- Export LEF, DEF files as necessary for verification and fabrication.
+## 🧱 Physical Design and Layout in *Cadence Innovus*
+
+The physical design phase converts the synthesized **netlist** into an optimized **layout** that meets timing, power, and area constraints.  
+Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)** using *Cadence Innovus*.
+
+---
+
+### 1. Import Design
+- Import synthesized **Verilog netlist**, **SDC constraints**, and **library files (.lib, .lef)**.  
+- Load **technology LEF** to define process layers and DRC rules.  
+- Set up the design environment and initialize the design.[View run.tcl source code](run.tcl)
+### 2. Floorplanning
+- Define core area, aspect ratio, and die size.
+- Place I/O pins, macros, and power rings (VDD/VSS).
+- Plan power grids and placement blockages if needed.
+- Maintain a core utilization between 60%–80% for optimal results.
+### 3. Power Planning
+- Generate power and ground rings around the core.
+- Add power stripes for uniform power distribution.
+ - Perform IR-drop checks and verify connectivity.
+### 4. Placement
+- Place all standard cells automatically using the Innovus placer.
+- Run placement optimization to reduce wire length and congestion.
+- Verify placement legality (no overlaps or boundary violations).
+### 5. Routing
+- Perform global routing to estimate congestion and routing resources.
+- Execute detailed routing to connect all signal and power nets.
+- Check for shorts, opens, and antenna effects.
+### 6. Post-Route Optimization
+- Run Static Timing Analysis (STA) after routing.
+- Fix setup/hold violations using cell resizing or buffer insertion.
+- Re-check DRC and LVS before final sign-off.
+### 7. Verification and Sign-off
+- Generate final DRC and LVS reports to ensure layout correctness.
+- Perform timing closure and power verification.
+- Confirm zero DRC errors and LVS match with the schematic.
+  ### 8. GDSII Generation
+- Export the final layout as a GDSII file ready for fabrication.
+- Also export LEF and DEF files for integration or verification.
+- Optionally, back-annotate parasitics (.spef) for post-layout simulation.
+- saveDesign csa_final.enc
+- streamOut csa_final.gds -mapFile streamOut.map -merge {stdcell.gds}
+  ### 9. Review and Visualization
+- Inspect the final layout visually using the Layout Viewer
+ - Capture and include screenshots of:
+- Floorplan view
+- Placed cells
+- Routed layout
+- Final GDSII view
 
 ## Constraints
 
