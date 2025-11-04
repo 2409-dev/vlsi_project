@@ -81,6 +81,21 @@ The project follows these main steps:
 - The `input_constraints.sdc` file configures a 100 MHz clock period, input and output delays, and accounts for clock uncertainty.
 - These constraints are critical for timing-driven synthesis and layout.
 
+## Comparison of carry save adder  with other adders
+| **Parameter**              | **Ripple Carry Adder (RCA)**                                                   | **Carry Save Adder (CSA)**                                                                                 | **Carry Look-Ahead Adder (CLA)**                                 |
+| -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Architecture**           | Serial connection of full adders where each carry propagates to the next stage | Parallel full adders that compute partial sum and carry separately (no carry propagation within the block) | Uses generate and propagate logic to compute carries in parallel |
+| **Carry Propagation**      | Sequential — carry ripples through all stages                                  | No carry propagation within the adder; carry saved for next stage                                          | Parallel carry generation — avoids ripple delay                  |
+| **Computation Speed**      | Slow (O(n) delay)                                                              | Fast (O(1) delay per bit stage, but requires post-processing)                                              | Very fast (logarithmic O(log n) delay)                           |
+| **Delay (16-bit Example)** | ~7–8 ns                                                                        | ~3–4 ns                                                                                                    | ~2–3 ns                                                          |
+| **Hardware Complexity**    | Simple — minimal logic                                                         | Moderate — extra adders to save carries                                                                    | High — complex carry logic network                               |
+| **Area**                   | Smallest                                                                       | Moderate                                                                                                   | Large (due to additional carry logic)                            |
+| **Power Consumption**      | Low                                                                            | Moderate                                                                                                   | High (due to large fan-in gates and more transitions)            |
+| **Scalability**            | Scales linearly with bit size (delay increases significantly)                  | Scales well for multi-operand addition                                                                     | Becomes more complex for large bit-widths                        |
+| **Best Used For**          | Low-power, simple ALUs                                                         | Fast multi-operand addition (e.g., multipliers, MAC units)                                                 | High-speed arithmetic units (e.g., CPUs, DSPs)                   |
+| **Design Complexity**      | Very simple                                                                    | Medium                                                                                                     | Complex                                                          |
+| **Implementation Type**    | Ripple-based sequential logic                                                  | Parallel adder array                                                                                       | Parallel carry generation                                        |
+| **Overall Performance**    | Slow but area-efficient                                                        | High-speed, area–power tradeoff                                                                            | Highest speed, area-intensive                                    |
 
 ## Author
 
