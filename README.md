@@ -65,7 +65,9 @@ The project follows these main steps:
 - Timing, power, and area reports
 - Schematic view of the synthesized design
 - Run Genus with: source run.tcl
-- after implemting the genus tool we will get the genus tool window from that we can get the schematic view  [schematic view](images/schematic.jpg)
+- after implemting the genus tool we will get the genus tool window from that we can get the schematic view  [schematic view]
+- ![WhatsApp Image 2025-10-25 at 11 55 07_f61e69f9](https://github.com/user-attachments/assets/405ba833-5299-49ce-9a17-111953c63461)
+
 - again in terminal generate the reports of area, power,timing 
 
 - - Inspect reports of [report_area](reports/report_area.txt),[report_power](reports/report_power.txt),[report_timing](reports/report_timing.txt)
@@ -89,18 +91,23 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Define core area, aspect ratio, and die size.
 - Place I/O pins, macros, and power rings (VDD/VSS).
 - Plan power grids and placement blockages if needed.
-    [floor planning](images/floorplanning.jpg)
+    [floor planning]
+  <img width="1008" height="845" alt="image" src="https://github.com/user-attachments/assets/abc420b7-0021-4d56-a777-2b1013fa52f1" />
+
 
 ### 3. Power Planning
 - Generate power and ground rings around the core.
 - Add power stripes for uniform power distribution.
  - Perform IR-drop checks and verify connectivity.
-    [power planning](images/powerplanning.jpg)
+    [power planning]
+   ![WhatsApp Image 2025-11-04 at 22 26 06_e995f4a6](https://github.com/user-attachments/assets/558efc1f-7652-4e60-8971-21756c72c103)
+
 
 ### 4. Placement
 - Place all standard cells automatically using the Innovus placer.
 - Run placement optimization to reduce wire length and congestion.
 - Verify placement legality (no overlaps or boundary violations).
+  
 ### 5. Routing
 - Perform global routing to estimate congestion and routing resources.
 - Execute detailed routing to connect all signal and power nets.
@@ -109,7 +116,9 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Run Static Timing Analysis (STA) after routing.
 - Fix setup/hold violations using cell resizing or buffer insertion.
 - Re-check DRC and LVS before final sign-off.
--  [routing](images/nanoroute.jpg)
+-  [routing]
+-  ![WhatsApp Image 2025-11-04 at 22 26 06_5d340ec3](https://github.com/user-attachments/assets/35ca2dbe-0203-4126-af0f-adaf3510bd86)
+
 ### 7. Verification and Sign-off
 - Generate final DRC and LVS reports to ensure layout correctness.
 - Perform timing closure and power verification.
@@ -124,14 +133,13 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Inspect the final layout visually using the Layout Viewer
  - Capture and include screenshots of:
 - Floorplan view
-- Placed cells[cellview](images/cellview.jpg)
+- Placed cells[cellview]
+- ![WhatsApp Image 2025-11-04 at 22 25 43_72ef429a](https://github.com/user-attachments/assets/ea627941-47b5-4833-8db2-3564fd3e9ed4)
+
 - Routed layout
 - Final GDSII view [View output constraints code](reports/carry_save_adder.gds)
-- final 3D view[3Dview](images/3dview.jpg)
-## Constraints
-
-- The `input_constraints.sdc` file configures a 100 MHz clock period, input and output delays, and accounts for clock uncertainty.
-- These constraints are critical for timing-driven synthesis and layout.
+- final 3D view[3Dview]
+  ![WhatsApp Image 2025-10-25 at 11 55 07_885d0b61](https://github.com/user-attachments/assets/a2213931-c5ef-4b18-b5d0-258a8c36d0b6)
 
 ## Comparison of carry save adder  with other adders
 | **Parameter**              | **Ripple Carry Adder (RCA)**                                                   | **Carry Save Adder (CSA)**                                                                                 | **Carry Look-Ahead Adder (CLA)**                                 |
