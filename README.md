@@ -101,12 +101,6 @@ The project follows these main steps:
 
 [GURRAM GOWTHAM,Murahari Venkat]
 
-## License
 
-Specify your preferred license (e.g., MIT, GPL, or proprietary).
-
----
-
-This README provides a comprehensive guide to your semi-custom ASIC carry save adder design, describing the key project components and stepwise flow using Cadence tools.
 
 
