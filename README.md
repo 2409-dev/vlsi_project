@@ -102,10 +102,11 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Perform global routing to estimate congestion and routing resources.
 - Execute detailed routing to connect all signal and power nets.
 - Check for shorts, opens, and antenna effects.
-### 6. Post-Route Optimization
+### 6. nano-Route Optimization
 - Run Static Timing Analysis (STA) after routing.
 - Fix setup/hold violations using cell resizing or buffer insertion.
 - Re-check DRC and LVS before final sign-off.
+-  [routing] [report](images/nanoroute.jpg)
 ### 7. Verification and Sign-off
 - Generate final DRC and LVS reports to ensure layout correctness.
 - Perform timing closure and power verification.
