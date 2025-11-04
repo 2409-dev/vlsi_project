@@ -86,13 +86,13 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Define core area, aspect ratio, and die size.
 - Place I/O pins, macros, and power rings (VDD/VSS).
 - Plan power grids and placement blockages if needed.
-    [floor planning] [report](images/floorplanning.jpg)
+    [floor planning](images/floorplanning.jpg)
 
 ### 3. Power Planning
 - Generate power and ground rings around the core.
 - Add power stripes for uniform power distribution.
  - Perform IR-drop checks and verify connectivity.
-    [power planning] [report](images/powerplanning.jpg)
+    [power planning](images/powerplanning.jpg)
 
 ### 4. Placement
 - Place all standard cells automatically using the Innovus placer.
@@ -106,7 +106,7 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Run Static Timing Analysis (STA) after routing.
 - Fix setup/hold violations using cell resizing or buffer insertion.
 - Re-check DRC and LVS before final sign-off.
--  [routing] [report](images/nanoroute.jpg)
+-  [routing](images/nanoroute.jpg)
 ### 7. Verification and Sign-off
 - Generate final DRC and LVS reports to ensure layout correctness.
 - Perform timing closure and power verification.
@@ -123,7 +123,7 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - Floorplan view
 - Placed cells
 - Routed layout
-- Final GDSII view
+- Final GDSII view [View output constraints code](reports/carry_save_adder.gds)
 
 ## Constraints
 
