@@ -45,7 +45,10 @@ The project follows these main steps:
   4.save the worklib
   5.A set of tools are shown in the nclaunch window which refer to the VHDL COMPILER,VERILOOG COMPILER,ELABORATOR, SIMULATOR
   6.LAUNCH THE SIMULAtor to get the waveforms.
-  [simulated waveform](images/waveform.jpg)
+  [simulated waveform]
+  <img width="1493" height="827" alt="image" src="https://github.com/user-attachments/assets/897261ca-5e4b-4015-b62d-7b41c58d11fc" />
+
+  
 
 
 - - Verify output using waveform viewer to check sum and carry signals for various test vectors.
