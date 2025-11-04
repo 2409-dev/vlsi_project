@@ -137,7 +137,7 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 - ![WhatsApp Image 2025-11-04 at 22 25 43_72ef429a](https://github.com/user-attachments/assets/ea627941-47b5-4833-8db2-3564fd3e9ed4)
 
 - Routed layout
-- Final GDSII view [View output constraints code](reports/carry_save_adder.gds)
+- Final GDSII view [View GDSI code](reports/carry_save_adder.gds)
 - final 3D view[3Dview]
   ![WhatsApp Image 2025-10-25 at 11 55 07_885d0b61](https://github.com/user-attachments/assets/a2213931-c5ef-4b18-b5d0-258a8c36d0b6)
 
