@@ -156,6 +156,17 @@ Below is the complete flow used to implement the **16-bit Carry Save Adder (CSA)
 | **Design Complexity**      | Very simple                                                                    | Medium                                                                                                     | Complex                                                          |
 | **Implementation Type**    | Ripple-based sequential logic                                                  | Parallel adder array                                                                                       | Parallel carry generation                                        |
 | **Overall Performance**    | Slow but area-efficient                                                        | High-speed, area–power tradeoff                                                                            | Highest speed, area-intensive                                    |
+
+## comparision with referenced values
+| Parameter         | 16-bit CSA (Your Design)                      | 16-bit RCA (Typical)                 | 16-bit CLA (Typical)                         |
+| ----------------- | --------------------------------------------- | ------------------------------------ | -------------------------------------------- |
+| Timing Delay      | ~2.5 ns (estimated from report)               | ~5–6 ns (sequential carry ripple)    | ~3 ns (parallel carry computation)           |
+| Power Consumption | ~6.7 nW (logic only from power report)        | ~3–4 nW (simpler logic, fewer gates) | ~5–6 nW (more complex logic, fanout buffers) |
+| Area              | 315 μm² (from area report)                    | ~200 μm² (smaller gate count)        | ~280 μm² (additional carry logic)            |
+| Critical Path     | Carry save units in parallel, no carry ripple | Full ripple through bits             | Carry lookahead generation tree              |
+| Best Use Case     | Fast multi-operand adders, multipliers        | Low power, area sensitive designs    | Faster two-operand addition, balanced        |
+
+
 ### optimizations to improve the performance
 - Design Level Optimizations
 - Pipeline the Adder: Add register stages between CSA stages (multi-stage carry save adder). This breaks long combinational paths, allowing higher clock frequencies.
