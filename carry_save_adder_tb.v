@@ -1,8 +1,4 @@
-// Verilog Testbench for 16-bit Carry Save Adder
-// This file applies different test vectors to the carry save adder module,
-// verifies its functional correctness by printing input and output values,
-// and displays simulation time for debug purposes.
-// The testbench includes stimulus for inputs and monitors sum/carry outputs.
+
 module carry_save_adder_tb;
     reg [15:0] a, b, c;
     wire [15:0] sum, carry;
